@@ -1,5 +1,7 @@
 # Dio's FramerJS Utils
-A FramerJS module with Dio's favorite FramerJS utility functions. It's a collection of useful functions to make general prototyping with Framer easier. For full reference, check our annotated source code in dio.coffee. I use [Facebook's shortcut's for framer](https://github.com/facebook/shortcuts-for-framer) too, sometimes, so these utilities overlap little with theirs.
+A collection of useful functions to make general prototyping with Framer faster and easier. For full reference, check the annotated source code in `dio.coffee`. 
+
+I sometimes use [Facebook's shortcut's for framer](https://github.com/facebook/shortcuts-for-framer) too, sometimes, so these utilities overlap little with theirs.
 
 ## How to use with Framer Studio
 
