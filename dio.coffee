@@ -16,7 +16,7 @@ dio.normalizeImportedLayers = (layers) ->
 dio.initialize = (layers) ->
   layers = Framer.CurrentContext._layerList if not layers
   dio.normalizeImportedLayers layers
-
+  window.Layers = layers
 
 dio.clone = clone = (obj) ->
   copy = undefined
@@ -55,9 +55,8 @@ dio.setVisibilityWhenAnimating = (layer, showStateName = 'showing', hideStateNam
 
 dio.switchLayerStates = (layer_names, state_name, animation_options) ->
   for layer_name in layer_names
-    do (layer_name) ->
-      layer = l[layer_name]
-      layer.states.switch state_name, animation_options
+    layer = window.Layers[layer_name]
+    layer.states.switch state_name, animation_options
 
 dio.eachLayer = (fn, filter) ->
   if typeof filter is string
