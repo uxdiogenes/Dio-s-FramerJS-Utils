@@ -1,7 +1,7 @@
 # Dio's FramerJS Utils
 A collection of useful functions to make general prototyping with Framer faster and easier.
 
-I sometimes use [Facebook's shortcut's for framer](https://github.com/facebook/shortcuts-for-framer) too, sometimes, so these utilities overlap little with theirs.
+I sometimes use [Facebook's shortcut's for framer](https://github.com/facebook/shortcuts-for-framer) too, sometimes, so these utilities overlap little with theirs and try not to conflict.
 
 ## How to use with Framer Studio
 
@@ -17,7 +17,7 @@ I sometimes use [Facebook's shortcut's for framer](https://github.com/facebook/s
 
 
 ## Usage
-* After importing your PSD/Sketch layers, call initialize to normalize and lowercase all layer names.
+* After importing your PSD/Sketch layers, call `initialize()` to normalize and lowercase all layer names.
     
 ```
 myLayers = Framer.Importer.load "..."
