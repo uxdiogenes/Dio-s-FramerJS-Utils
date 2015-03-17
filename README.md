@@ -46,11 +46,11 @@ other_anim_opts.delay = 0.5
 A quick way to set a layer to visible _before_ beginning to animate it to a show-state, and also hide it _after_ completing an animation to a hide state. This is handy when you want, say, a layer that you are animating to 0 opacity to not be around to accept click events once it is no longer visible.
 
 
-### `dio.switchLayerStates(layer_names, [state_name, animation_options])`
-A shortcut for switching an array of layers all to a single state name using one set of animation options.
+### `dio.switchLayerStates(layer_names, state_name, [animation_options])`
+A shortcut for switching an array of layers all to a single state name, optionally using one set of animation options.
 
 ### `dio.eachLayer(fn, [filter])`
-A shortcut for running a function that takes a layer, for each layer. If you pass in a regexp or filtering string as the second argument, it will only run the function on layers whose names match. So here's how you might hide any layers whose names contain "poop".:
+A shortcut for running a function that takes a layer, for each layer. If you pass in an optional regular expression or filtering string as the second argument, it will only run the function on layers whose names match. So here's how you might hide any layers whose names contain "poop".:
 ```
 hideLayer = (layer) ->
   layer.visible = false
