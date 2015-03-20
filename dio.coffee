@@ -59,11 +59,11 @@ dio.switchLayerStates = (layer_names, state_name, animation_options) ->
     layer.states.switch state_name, animation_options
 
 dio.eachLayer = (fn, filter) ->
-  if typeof filter is string
+  if typeof filter is 'string'
     filter = new RegExp(str, 'i')
 
   for layer of window.Layers
     _layer = window.Layers[layer]
-    fn _layer if !filter or layer.name.match filter
+    fn _layer if not filter or layer.name.match filter
 
 _.extend(exports, dio)
