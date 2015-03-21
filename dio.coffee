@@ -9,9 +9,11 @@ sanitizeLayerName = (layer) ->
 
 
 dio.normalizeImportedLayers = (layers) ->
-  for layer_name, layer in layers
+  for layer_name in Object.keys(layers)
+    layer = layers[layer_name]
     delete layers[layer_name]
     layers[sluggifyNameString layer_name] = layer
+
 
 dio.initialize = (layers) ->
   layers = Framer.CurrentContext._layerList if not layers
